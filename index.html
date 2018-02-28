@@ -29,6 +29,7 @@
         <a class="sidebar__link" href="#horizontal-and-vertical-centering">Horizontal and vertical centering</a>
         <a class="sidebar__link" href="#mouse-cursor-gradient-tracking">Mouse cursor gradient tracking</a>
         <a class="sidebar__link" href="#overflow-scroll-gradient">Overflow scroll gradient</a>
+        <a class="sidebar__link" href="#parallax">Parallax</a>
         <a class="sidebar__link" href="#popout-menu">Popout menu</a>
         <a class="sidebar__link" href="#pretty-text-underline">Pretty text underline</a>
         <a class="sidebar__link" href="#shape-separator">Shape separator</a>
@@ -772,6 +773,53 @@ var y = e.pageY - btn.offsetTop - btn.offsetParent.offsetTop
             <ul>
               <li>
                 <a href="https://caniuse.com/#feat=css-gradients" target="_blank">https://caniuse.com/#feat=css-gradients</a>
+              </li>
+            </ul>
+          </div>
+          <div class="snippet">
+            <h3 id="parallax">Parallax</h3>
+            <p>Background-image with scroll parallax.</p>
+            <h4 data-type="HTML">HTML</h4><pre><code class="lang-html">&lt;div class="hero"&gt;&lt;/div&gt;
+</code></pre>
+            <h4 data-type="CSS">CSS</h4><pre><code class="lang-css">.hero {
+  width: 100%;
+  height: 200px;
+  background-image: url(https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+}
+</code></pre>
+            <h4 data-type="Demo">Demo</h4>
+            <div class="snippet-demo">
+              <div class="hero"></div>
+            </div>
+            <style>
+              .hero {
+                width: 100%;
+                height: 200px;
+                background-image: url(https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg);
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-position: left;
+                background-size: cover;
+              }
+            </style>
+            <h4 data-type="Explanation">Explanation</h4>
+            <ol>
+              <li>Defined <code>background-attachment</code> with <code>fixed</code></li>
+            </ol>
+            <h4 data-type="Browser support">Browser support</h4>
+            <div>
+              <div class="snippet__browser-support">
+                93.1%
+              </div>
+            </div>
+            <p><span class="snippet__support-note">✅ No caveats.</span></p>
+            <ul>
+              <li>
+                <a href="https://caniuse.com/#feat=background-attachment" target="_blank">https://caniuse.com/#feat=background-attachment</a>
               </li>
             </ul>
           </div>
