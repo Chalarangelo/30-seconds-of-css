@@ -41,7 +41,7 @@ for (const snippetFile of fs.readdirSync(SNIPPETS_PATH)) {
   const el = createElement(snippetTemplate)
   snippetContainer.append(el)
   
-  el.querySelectorAll('pre').forEach(el => el.setAttribute('contenteditable', ''))
+  el.querySelectorAll('h4[data-type="CSS"] + pre').forEach(el => el.setAttribute('contenteditable', ''))
 
   sidebarLinks.append(
     createElement(
