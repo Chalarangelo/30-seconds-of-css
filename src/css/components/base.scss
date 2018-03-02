@@ -21,6 +21,15 @@ a {
   }
 }
 
+pre {
+  transition: box-shadow 0.1s ease-out;
+  
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px #7983ff;
+  }
+}
+
 hr {
   border: 0;
   border-top: 1px solid rgba(0, 32, 128, 0.1);
@@ -29,6 +38,15 @@ hr {
 ul,
 ol {
   padding-left: 1.25rem;
+}
+
+::selection {
+  background: #7983ff;
+  color: white;
+}
+::-moz-selection {
+  background: #7983ff;
+  color: white;
 }
 
 .container {
