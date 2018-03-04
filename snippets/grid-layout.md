@@ -67,7 +67,6 @@ Basic website layout using `grid`.
         background-color: #fff;
         color: #444;
 }
-
 .box {
   background-color: #444;
   color: #fff;
@@ -75,19 +74,15 @@ Basic website layout using `grid`.
   padding: 10px;
   font-size: 150%;
 }
-
 .snippet-demo__grid-layout__sidebar {
     grid-area: sidebar;
 }
-
 .snippet-demo__grid-layout__content {
     grid-area: content;
 }
-
 .snippet-demo__grid-layout__header {
     grid-area: header;
 }
-
 .snippet-demo__grid-layout__footer {
     grid-area: footer;
 }
@@ -96,8 +91,10 @@ Basic website layout using `grid`.
 #### Explanation
 
 1. `display: grid` enables grid.
-2. `justify-content: center` centers the child horizontally.
-3. `align-items: center` centers the child vertically.
+2. `grid-gap: 10px` defines spacing between the elements.
+3. `grid-template-columns: repeat(3, 1fr)` defines 3 columns of the same size.
+4. `grid-template-areas` defines the names of grid areas.
+5. `grid-area: sidebar` makes the element use the area with the name `sidebar`.
 
 #### Browser support
 
