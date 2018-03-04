@@ -30,5 +30,5 @@ snippets.forEach(snippet => {
   copyButton.innerHTML = '<i data-feather="copy"></i>Copy to clipboard'
   copyButton.onclick = () => copyToClipboard(autoprefixCss)
 
-  snippet.insertBefore(copyButton, snippet.querySelector('.snippet-demo').nextSibling) // Insert next to h4 CSS
+  snippet.insertBefore(copyButton, snippet.querySelector('h4[data-type="CSS"]').nextSibling)
 })
