@@ -26,7 +26,7 @@ snippets.forEach(snippet => {
   const autoprefixCss = css //Hook autoprexier to this part
 
   const copyButton = document.createElement('button')
-  copyButton.classList = 'btn is-large codepen-btn'
+  copyButton.classList = 'btn is-large clipboard-btn'
   copyButton.innerHTML = '<i data-feather="copy"></i>Copy to clipboard'
   copyButton.onclick = () => copyToClipboard(autoprefixCss)
 
