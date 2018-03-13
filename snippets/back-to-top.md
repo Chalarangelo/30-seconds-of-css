@@ -2,14 +2,14 @@
 
 Creates a button to scroll on top of the page
 
-### HTML 
+#### HTML 
 ```html
 <div class="back-to-top">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 10v8h6v-8h5l-8-8-8 8h5z" /></svg>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .back-to-top {
@@ -19,10 +19,15 @@ Creates a button to scroll on top of the page
   background: #333;
   cursor: pointer;
   padding: 1rem;
+  border-radius: 50%;
+}
+.back-to-top svg{
+  fill: white;
+  width: 15px;
 }
 ```
 
-### JAVASCRIPT
+#### JAVASCRIPT
 
 ```javascript
 document.getElementsByClassName('back-to-top')[0].addEventListener('click', function() {
@@ -31,19 +36,25 @@ document.getElementsByClassName('back-to-top')[0].addEventListener('click', func
 ```
 
 #### Demo
-
-<div class="back-to-top">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 10v8h6v-8h5l-8-8-8 8h5z" /></svg>
+<div class="snippet-demo">
+    <div class="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 10v8h6v-8h5l-8-8-8 8h5z" /></svg>
+    </div>
 </div>
 
 <style>
 .back-to-top {
-  position: fixed;
+  position: absolute;
   bottom: 10px; 
   right: 10px;
   background: #333;
   cursor: pointer;
   padding: 1rem;
+  border-radius: 50%;
+}
+.back-to-top svg{
+  fill: white;
+  width: 15px;
 }
 </style>
 
