@@ -5,7 +5,7 @@ Brief description
 #### HTML
 
 ```html
-<img id="myImg" src="img/sky.jpg" alt="Sky">
+<img id="myImg" src="src/img/sky.jpg" alt="Sky">
 ```
 
 #### CSS
