@@ -1,6 +1,6 @@
 ### Snippet name
 
-Brief description
+Making a square image into Round
 
 #### HTML
 
