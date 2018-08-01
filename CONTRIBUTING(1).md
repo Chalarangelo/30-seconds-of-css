@@ -3,8 +3,9 @@
 Brief description
 
 #### HTML
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 ```html
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <a href="https://images4.alphacoders.com/876/876898.jpg">
 <img border="0" alt="Sky" src="src/img/sky.jpg" width="100" height="100" class="image">
 
