@@ -1,6 +1,6 @@
 ### Snippet name
 
-Brief description
+Image hover name and link to it
 
 #### HTML
 
