@@ -1,11 +1,11 @@
 ### Snippet name
 
-Brief description
+Making a square image into Round
 
 #### HTML
 
 ```html
-
+<img id="myImg" src="src/img/sky.jpg" alt="Sky">
 ```
 
 #### CSS
@@ -25,13 +25,18 @@ Brief description
 <!-- Add your style rules here. -->
 
 <style>
-
+img {
+    border-radius: 50%;
+	width: 300;
+	height:300;
+}
 </style>
 
 #### Explanation
 
 <!-- Use a step-by-step (ordered) list if possible. Keep it concise. -->
-
+<h4>Explanation</h4>
+<p>This style allows a square image into round image just by divide the radius of the image into 50%</p>
 #### Browser support
 
 <!-- Use the checkmark or the warning emoji, see the existing snippets. -->
