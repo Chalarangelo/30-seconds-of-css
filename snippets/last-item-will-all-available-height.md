@@ -59,9 +59,10 @@ body {
 
 #### Explanation
 
-1. `display: flex` enables flexbox.
-2. `flex-direction: column` set the direction of flex items' order from top to down
-3. `flex-grow: 1` the flexbox will apply remaining available space of container to last child element.
+1. `height: 100%` set the height of container as viewport height
+2. `display: flex` enables flexbox.
+3. `flex-direction: column` set the direction of flex items' order from top to down
+4. `flex-grow: 1` the flexbox will apply remaining available space of container to last child element.
 
 The parent must have a viewport height. `flex-grow: 1` could be applied to the first or second element, which will have all available space.
 
