@@ -35,9 +35,7 @@ Creates a toggle switch with CSS only.
 }
 
 input[type='checkbox']:checked + .switch::after {
-  left: 100%;
-  transform: translateX(-100%);
-  margin-left: -1px;
+  transform: translateX(20px);
 }
 
 input[type='checkbox']:checked + .switch {
@@ -45,7 +43,8 @@ input[type='checkbox']:checked + .switch {
 }
 
 .offscreen {
-  display: none;
+  position: absolute;
+  left: -9999px;
 }
 ```
 
