@@ -82,9 +82,7 @@ input[type='checkbox']:checked + .switch {
 }
 
 input[type="checkbox"]:checked + .switch::after {
-  left: 100%;
-  transform: translateX(-100%);
-  margin-left: -1px;
+  transform: translateX(20px);
 }
 
 input[type="checkbox"]:checked + .switch {
@@ -92,7 +90,8 @@ input[type="checkbox"]:checked + .switch {
 }
 
 .offscreen {
-  display: none;
+  position: absolute;
+  left: -9999px;
 }
 </style>
 
@@ -101,12 +100,10 @@ input[type="checkbox"]:checked + .switch {
 1. `for` attribute in `<label>` and `id` in `<input>` need to be the same so that `<label>` can be associated with `<input>` element
 2. `.switch::after` defines a pseudo-element in `<label>` with absolute position.
 3. `input[type='checkbox']:checked + .switch::after` update `label` pseudo-element's style when `input` checkbox has `checked` attribute.
-4. `left: 100%` move pseudo-element to right as width as `label`
-5. `transform: translateX(-100%)` move pseudo-element to left as width as itself
-6. `margin-left: -1px`leaving 1px space between `label` end and pseudo-element
-7. `background-color: blue;` change background color to blue when pseudo-element in move to right
-8. `.offscreen` hide the `<input>` element and it will not take up any physical space in DOM
-9. `transition:all` specifies `<label>` background color and its pseudo-element left property will be transitioned over 0.3 seconds
+4. `transform: translateX(20px)` move pseudo-element to left 20px when `input` checkbox is `checked`
+5. `background-color: #7983ff;` change background color when `input` checkbox is `checked`
+6. `.offscreen` take the `<input>` element out of the flow of document and position far away from the view, but accessible from keyboard and screen reader.
+7. `transition:all` specifies `<label>` background color and its pseudo-element left property will be transitioned over 0.3 seconds
 
 #### Browser support
 
