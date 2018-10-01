@@ -19,6 +19,7 @@ Creates a toggle switch with CSS only.
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   position: relative;
+  transition: all 0.3s;
 }
 
 .switch::after {
@@ -30,6 +31,7 @@ Creates a toggle switch with CSS only.
   position: absolute;
   top: 1px;
   left: 1px;
+  transition: all 0.3s;
 }
 
 input[type='checkbox']:checked + .switch::after {
@@ -39,7 +41,7 @@ input[type='checkbox']:checked + .switch::after {
 }
 
 input[type='checkbox']:checked + .switch {
-  background-color: blue;
+  background-color: #7983ff;
 }
 
 .offscreen {
@@ -64,6 +66,7 @@ input[type='checkbox']:checked + .switch {
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   position: relative;
+  transition: all 0.3s;
 }
 
 .switch::after {
@@ -75,6 +78,7 @@ input[type='checkbox']:checked + .switch {
   position: absolute;
   top: 1px;
   left: 1px;
+  transition: all 0.3s;
 }
 
 input[type="checkbox"]:checked + .switch::after {
@@ -84,7 +88,7 @@ input[type="checkbox"]:checked + .switch::after {
 }
 
 input[type="checkbox"]:checked + .switch {
-  background-color: blue;
+  background-color: #7983ff;
 }
 
 .offscreen {
