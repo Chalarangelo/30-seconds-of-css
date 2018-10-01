@@ -17,7 +17,7 @@ Evenly distributes child elements within a parent element.
 ```css
 .evenly-distributed-children {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 ```
 
@@ -35,14 +35,14 @@ Evenly distributes child elements within a parent element.
 .snippet-demo__evenly-distributed-children {
   display: flex;
   width: 100%;  
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 </style>
 
 #### Explanation
 
 1. `display: flex` enables flexbox.
-2. `justify-content: space-between` evenly distributes child elements horizontally. The first item is positioned at the left edge, while the last item is positioned at the right edge.
+2. `justify-content: space-evenly` evenly distributes child elements horizontally. The first item is positioned at the left edge, while the last item is positioned at the right edge. in the file to evenly distributes the children as well as the space between them.
 
 Alternatively, use `justify-content: space-around` to distribute the children with space around them, rather than between them.
 
