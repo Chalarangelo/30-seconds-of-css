@@ -8,7 +8,14 @@ Counters are, in essence, variables maintained by CSS whose values may be increm
 <ul>
   <li>List item</li>
   <li>List item</li>
-  <li>List item</li>
+  <li>
+    List item
+    <ul>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ul>
+  </li>
 </ul>
 ```
 
