@@ -51,10 +51,8 @@ input[type='checkbox']:checked + .switch {
 #### Demo
 
 <div class="snippet-demo">
-  <div class="snippet-demo__css-toggle-switch">
-    <input type="checkbox" id="toggle" class="snippet-demo__offscreen" />
-    <label for="toggle" class="snippet-demo__switch"></label>
-  </div>
+  <input type="checkbox" id="toggle" class="snippet-demo__offscreen" />
+  <label for="toggle" class="snippet-demo__switch"></label>
 </div>
 
 <style>
@@ -69,7 +67,7 @@ input[type='checkbox']:checked + .switch {
 }
 
 .snippet-demo__switch::after {
-  content: " ";
+  content: '';
   width: 18px;
   height: 18px;
   border-radius: 18px;
@@ -80,11 +78,11 @@ input[type='checkbox']:checked + .switch {
   transition: all 0.3s;
 }
 
-input[type="checkbox"].snippet-demo__offscreen:checked + .switch::after {
+input[type="checkbox"]:checked + .snippet-demo__switch::after {
   transform: translateX(20px);
 }
 
-input[type="checkbox"].snippet-demo__offscreen:checked + .switch {
+input[type="checkbox"]:checked + .snippet-demo__switch {
   background-color: #7983ff;
 }
 
