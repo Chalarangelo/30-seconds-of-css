@@ -1,4 +1,4 @@
-### CSS toggle switch
+### Toggle switch
 
 Creates a toggle switch with CSS only.
 
@@ -51,14 +51,14 @@ input[type='checkbox']:checked + .switch {
 #### Demo
 
 <div class="snippet-demo">
-    <div class="snippet-demo__css-toggle-switch">
-        <input type="checkbox" id="toggle" class="offscreen" />
-        <label for="toggle" class="switch"></label>
-    </div>
+  <div class="snippet-demo__css-toggle-switch">
+    <input type="checkbox" id="toggle" class="snippet-demo__offscreen" />
+    <label for="toggle" class="snippet-demo__switch"></label>
+  </div>
 </div>
 
 <style>
-.switch {
+.snippet-demo__switch {
   display: inline-block;
   width: 40px;
   height: 20px;
@@ -68,7 +68,7 @@ input[type='checkbox']:checked + .switch {
   transition: all 0.3s;
 }
 
-.switch::after {
+.snippet-demo__switch::after {
   content: " ";
   width: 18px;
   height: 18px;
@@ -80,15 +80,15 @@ input[type='checkbox']:checked + .switch {
   transition: all 0.3s;
 }
 
-input[type="checkbox"]:checked + .switch::after {
+input[type="checkbox"].snippet-demo__offscreen:checked + .switch::after {
   transform: translateX(20px);
 }
 
-input[type="checkbox"]:checked + .switch {
+input[type="checkbox"].snippet-demo__offscreen:checked + .switch {
   background-color: #7983ff;
 }
 
-.offscreen {
+.snippet-demo__offscreen {
   position: absolute;
   left: -9999px;
 }
