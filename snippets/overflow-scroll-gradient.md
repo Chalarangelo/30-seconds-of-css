@@ -43,42 +43,6 @@ Adds a fading gradient to an overflowing element to better indicate there is mor
 
 #### Demo
 
-<div class="snippet-demo">
-  <div class="snippet-demo__overflow-scroll-gradient">
-    <div class="snippet-demo__overflow-scroll-gradient__scroller">
-      Content to be scrolled
-    </div>
-  </div>
-</div>
-
-<style>
-.snippet-demo__overflow-scroll-gradient {
-  position: relative;
-}
-.snippet-demo__overflow-scroll-gradient::after {
-  content: '';
-  background: linear-gradient(rgba(255, 255, 255, 0.001), white);
-  position: absolute;
-  width: 240px;
-  height: 25px;
-  bottom: 0;
-  pointer-events: none;
-}
-.snippet-demo__overflow-scroll-gradient__scroller {
-  overflow-y: scroll;
-  background: white;
-  width: 240px;
-  height: 200px;
-  padding: 15px 0;
-  line-height: 1.2;
-  text-align: center;
-}
-</style>
-
-<script>
-document.querySelector('.snippet-demo__overflow-scroll-gradient__scroller').innerHTML = 'content '.repeat(100)
-</script>
-
 #### Explanation
 
 1. `position: relative` on the parent establishes a Cartesian positioning context for pseudo-elements.

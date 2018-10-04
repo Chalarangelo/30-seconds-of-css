@@ -35,28 +35,6 @@ body {
 
 #### Demo
 
-<div class="snippet-demo">
-    <div class="snippet-demo__last-time-with-all-available-height">
-        <div>Div 1</div>
-        <div>Div 2</div>
-        <div>Div 3</div>
-    </div>
-</div>
-
-<style>
-.snippet-demo__last-time-with-all-available-height {
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-}
-
-.snippet-demo__last-time-with-all-available-height > div:last-child {
-  background-color: #333;
-  flex-grow: 1;
-  color: white;
-}
-</style>
-
 #### Explanation
 
 1. `height: 100%` set the height of container as viewport height.

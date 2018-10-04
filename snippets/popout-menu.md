@@ -30,38 +30,6 @@ Reveals an interactive popout menu on hover.
 
 #### Demo
 
-<div class="snippet-demo">
-  <div class="snippet-demo__reference">
-    <div class="snippet-demo__popout-menu">
-      Popout menu
-    </div>
-  </div>
-</div>
-
-<style>
-.snippet-demo__reference {
-  background: linear-gradient(135deg, #ff4c9f, #ff7b74);
-  height: 75px;
-  width: 75px;
-  position: relative;
-  will-change: transform;
-}
-.snippet-demo__popout-menu {
-  position: absolute;
-  visibility: hidden;
-  left: 100%;
-  background: #333;
-  color: white;
-  font-size: 0.9rem;
-  padding: 0.4rem 0.8rem;
-  width: 100px;
-  text-align: center;
-}
-.snippet-demo__reference:hover > .snippet-demo__popout-menu {
-  visibility: visible;
-}
-</style>
-
 #### Explanation
 
 1. `position: relative` on the reference parent establishes a Cartesian positioning context for its child.

@@ -18,22 +18,6 @@ html {
 
 #### Demo
 
-<div class="snippet-demo">
-  <div class="snippet-demo__box-sizing-reset">Demo</div>
-</div>
-
-<style>
-.snippet-demo__box-sizing-reset {
-  box-sizing: border-box;
-  width: 200px;
-  padding: 1.5em;
-  color: #7983ff;
-  font-family: sans-serif;
-  background-color: white;
-  border: 5px solid;
-}
-</style>
-
 #### Explanation
 
 1. `box-sizing: border-box` makes the addition of `padding` or `border`s not affect an element's `width` or `height`.
