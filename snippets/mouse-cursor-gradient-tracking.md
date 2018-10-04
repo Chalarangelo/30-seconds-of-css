@@ -54,8 +54,8 @@ A hover effect where the gradient follows the mouse cursor.
 ```js
 var btn = document.querySelector('.mouse-cursor-gradient-tracking')
 btn.onmousemove = function(e) {
-  var x = e.pageX - btn.offsetLeft
-  var y = e.pageY - btn.offsetTop
+  var x = e.pageX - btn.offsetLeft - btn.offsetParent.offsetLeft
+  var y = e.pageY - btn.offsetTop - btn.offsetParent.offsetTop
   btn.style.setProperty('--x', x + 'px')
   btn.style.setProperty('--y', y + 'px')
 }
@@ -66,16 +66,6 @@ btn.onmousemove = function(e) {
 #### Explanation
 
 _TODO_
-
-**Note!**
-
-If the element's parent has a positioning context (`position: relative`), you will need to subtract
-its offsets as well.
-
-```js
-var x = e.pageX - btn.offsetLeft - btn.offsetParent.offsetLeft
-var y = e.pageY - btn.offsetTop - btn.offsetParent.offsetTop
-```
 
 #### Browser support
 
