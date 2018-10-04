@@ -1,11 +1,11 @@
 ### Popout menu
 
-Reveals an interactive popout menu on hover.
+Reveals an interactive popout menu on hover and focus.
 
 #### HTML
 
 ```html
-<div class="reference">
+<div class="reference" tabindex="0">
   <div class="popout-menu">
     Popout menu
   </div>
@@ -17,13 +17,20 @@ Reveals an interactive popout menu on hover.
 ```css
 .reference {
   position: relative;
+  background: tomato;
+  width: 100px;
+  height: 100px;
 }
 .popout-menu {
   position: absolute;
   visibility: hidden;
   left: 100%;
+  background: #333;
+  color: white;
+  padding: 15px;
 }
-.reference:hover > .popout-menu {
+.reference:hover > .popout-menu,
+.reference:focus > .popout-menu {
   visibility: visible;
 }
 ```

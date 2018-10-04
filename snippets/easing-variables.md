@@ -6,13 +6,17 @@ powerful than the built-in `ease`, `ease-in`, `ease-out` and `ease-in-out`.
 #### HTML
 
 ```html
-<div class="easing-variables"></div>
+<div class="easing-variables">Hover</div>
 ```
 
 #### CSS
 
 ```css
 :root {
+  /* Place variables in here to use globally */
+}
+
+.easing-variables {
   --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   --ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
@@ -33,11 +37,13 @@ powerful than the built-in `ease`, `ease-in`, `ease-out` and `ease-in-out`.
   --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
   --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
   --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
-
-.easing-variables {
-  width: 50px;
-  height: 50px;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  padding: 10px;
+  color: white;
+  line-height: 50px;
+  text-align: center;
   background: #333;
   transition: transform 1s var(--ease-out-quart);
 }

@@ -21,6 +21,10 @@ The `:not` psuedo selector is useful for styling a group of elements, while leav
   display: flex;
 }
 
+ul {
+  padding-left: 0;
+}
+
 li {
   list-style-type: none;
   margin: 0;

@@ -17,6 +17,7 @@ Horizontally and vertically centers a child element within a parent element usin
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100px;
 }
 ```
 

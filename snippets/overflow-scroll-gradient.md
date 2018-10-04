@@ -7,7 +7,14 @@ Adds a fading gradient to an overflowing element to better indicate there is mor
 ```html
 <div class="overflow-scroll-gradient">
   <div class="overflow-scroll-gradient__scroller">
-    Content to be scrolled
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+    Iure id exercitationem nulla qui repellat laborum vitae, <br>
+    molestias tempora velit natus. Quas, assumenda nisi. <br>
+    Quisquam enim qui iure, consequatur velit sit? <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+    Iure id exercitationem nulla qui repellat laborum vitae, <br>
+    molestias tempora velit natus. Quas, assumenda nisi. <br>
+    Quisquam enim qui iure, consequatur velit sit?
   </div>
 </div>
 ```
@@ -35,9 +42,8 @@ Adds a fading gradient to an overflowing element to better indicate there is mor
   background: white;
   width: 240px;
   height: 200px;
-  padding: 15px 0;
+  padding: 15px;
   line-height: 1.2;
-  text-align: center;
 }
 ```
 

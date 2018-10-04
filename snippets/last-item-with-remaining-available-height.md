@@ -28,7 +28,7 @@ body {
 }
 
 .container > div:last-child {
-  background-color: #333;
+  background-color: tomato;
   flex: 1;
 }
 ```
