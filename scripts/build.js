@@ -3,6 +3,7 @@ const path = require('path')
 const marked = require('marked')
 const pretty = require('pretty')
 const caniuseDb = require('caniuse-db/data.json')
+const sass = require('node-sass')
 const { toKebabCase, createElement, template, dom } = require('../utils/utils.js')
 
 const SNIPPETS_PATH = './snippets'
@@ -69,7 +70,20 @@ TAGS.slice(1).forEach(tag => {
 for (const snippetFile of fs.readdirSync(SNIPPETS_PATH)) {
   const snippetPath = path.join(SNIPPETS_PATH, snippetFile)
   const snippetData = fs.readFileSync(snippetPath, 'utf8')
-  const markdown = marked(snippetData, { renderer })
+
+  const html = ((snippetData.match(/```html([\s\S]*?)```/) || [])[1] || '').trim()
+  const css = snippetData.match(/```css([\s\S]*?)```/)[1]
+  const scopedCSS = sass.renderSync({
+    data: `[data-scope="${snippetFile}"] { ${css} }`
+  })
+
+  const demo = `<div class="snippet-demo" data-scope="${snippetFile}">${html}</div>` +
+  `<style>${scopedCSS.css.toString()}</style>`
+
+  const markdown = marked(snippetData, { renderer }).replace(
+    '<h4>Demo</h4>',
+    `<h4>Demo</h4>${demo}`
+  )
   const snippetEl = createElement(`<div class="snippet">${markdown}</div>`)
   snippetContainer.append(snippetEl)
 
