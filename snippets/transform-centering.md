@@ -25,6 +25,7 @@ Vertically and horizontally centers a child element within its parent element us
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 ```
 
