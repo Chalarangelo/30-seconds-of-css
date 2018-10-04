@@ -76,9 +76,11 @@ for (const snippetFile of fs.readdirSync(SNIPPETS_PATH)) {
   const scopedCSS = sass.renderSync({
     data: `[data-scope="${snippetFile}"] { ${css} }`
   })
+  const js = (snippetData.match(/```js([\s\S]*?)```/) || [])[1]
 
   const demo = `<div class="snippet-demo" data-scope="${snippetFile}">${html}</div>` +
-  `<style>${scopedCSS.css.toString()}</style>`
+  `<style>${scopedCSS.css.toString()}</style>` +
+  `${js ? `<script>(function(){${js}})();</script>` : ''}`
 
   const markdown = marked(snippetData, { renderer }).replace(
     '<h4>Demo</h4>',
