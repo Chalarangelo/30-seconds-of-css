@@ -1,6 +1,8 @@
 ### <a> No Decoration
 
-Removes the default decoration
+Removes the default decoration from an `<a>`-tag.
+This is useful when the default highlighting behaviour
+shall not be used.
 
 #### HTML
 
