@@ -65,7 +65,7 @@
           <a class="sidebar__link" href="#button-border">
             <img alt="New" draggable="false" class="sidebar__new" src="./src/img/new.svg"><span>Toggle switch</span></a>
           <a class="sidebar__link" href="#disable-selection"><span>Disable selection</span></a>
-          <a class="sidebar__link" href="#icon-border">
+          <a class="sidebar__link" href="#icon-border-animation">
             <img alt="New" draggable="false" class="sidebar__new" src="./src/img/new.svg"><span>Icon Border Animation</span></a>
           <a class="sidebar__link" href="#icon-circle-border">
             <img alt="New" draggable="false" class="sidebar__new" src="./src/img/new.svg"><span>Icon Circle Border animation</span></a>
@@ -1812,13 +1812,13 @@ el.style.setProperty('--max-height', height + 'px')
 }
 </code></pre>
             <h4>Demo</h4>
-            <div class="snippet-demo" data-scope="icon-border.md">
+            <div class="snippet-demo" data-scope="icon-border-animation.md">
               <a href="#" class="button ion-ios-star-outline"></a>
             </div>
             <style>
               @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
-              [data-scope="icon-border.md"] {}
-              [data-scope="icon-border.md"] .button {
+              [data-scope="icon-border-animation.md"] {}
+              [data-scope="icon-border-animation.md"] .button {
                 position: relative;
                 overflow: hidden;
                 font-size: 40px;
@@ -1832,13 +1832,13 @@ el.style.setProperty('--max-height', height + 'px')
                 -webkit-box-sizing: border-box;
                 box-sizing: border-box;
               }
-              [data-scope="icon-border.md"] .button::before {
+              [data-scope="icon-border-animation.md"] .button::before {
                 background-color: #2b2b2b;
                 width: 75px;
                 height: 75px;
                 line-height: 75px;
               }
-              [data-scope="icon-border.md"] .button:after {
+              [data-scope="icon-border-animation.md"] .button:after {
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -1851,19 +1851,19 @@ el.style.setProperty('--max-height', height + 'px')
                 -webkit-transform: rotate(-45deg) scale(1.5) translate(0%, -100%);
                 transform: rotate(-45deg) scale(1.5) translate(0%, -100%);
               }
-              [data-scope="icon-border.md"] .button:before,
-              [data-scope="icon-border.md"] .button:after {
+              [data-scope="icon-border-animation.md"] .button:before,
+              [data-scope="icon-border-animation.md"] .button:after {
                 -webkit-transition: all 0.4s ease-in-out;
                 transition: all 0.4s ease-in-out;
               }
-              [data-scope="icon-border.md"] .button:hover,
-              [data-scope="icon-border.md"] .button:active,
-              [data-scope="icon-border.md"] .button.hover {
+              [data-scope="icon-border-animation.md"] .button:hover,
+              [data-scope="icon-border-animation.md"] .button:active,
+              [data-scope="icon-border-animation.md"] .button.hover {
                 color: #ffffff;
               }
-              [data-scope="icon-border.md"] .button:hover:after,
-              [data-scope="icon-border.md"] .button:active:after,
-              [data-scope="icon-border.md"] .button.hover:after {
+              [data-scope="icon-border-animation.md"] .button:hover:after,
+              [data-scope="icon-border-animation.md"] .button:active:after,
+              [data-scope="icon-border-animation.md"] .button.hover:after {
                 -webkit-transform: rotate(-45deg) scale(1.5) translate(0%, 0%);
                 transform: rotate(-45deg) scale(1.5) translate(0%, 0%);
               }
