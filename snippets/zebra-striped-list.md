@@ -1,6 +1,6 @@
 ### Zebra striped list
 
-Creates a striped list with alternating background colors, which is useful for differentiating siblings along a row of content.
+Creates a striped list with alternating background colors, which is useful for differentiating siblings that have content spread across a wide row.
 
 #### HTML
 
