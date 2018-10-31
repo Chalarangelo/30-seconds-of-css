@@ -1,4 +1,4 @@
-### Zebra Striped List
+### Zebra striped list
 
 Creates a zebra striped style.
 
