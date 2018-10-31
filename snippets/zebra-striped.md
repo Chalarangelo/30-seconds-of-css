@@ -1,6 +1,6 @@
 ### Zebra striped list
 
-Creates a zebra striped style.
+Creates a striped list with alternating background colors, which is useful for differentiating siblings along a row of content.
 
 #### HTML
 
@@ -27,7 +27,7 @@ li:nth-child(odd) {
 
 #### Explanation
 
-1. Use `:nth-child(odd)` or `:nth-child(even)` CSS pseudo-class to apply different background color that match elements based on their position in a group of siblings.
+1. Use the `:nth-child(odd)` or `:nth-child(even)` pseudo-class to apply a different background color to elements that match based on their position in a group of siblings.
 
 Note that you can use it to apply different styles to other HTML elements like div, tr, p, ol, etc.
 
