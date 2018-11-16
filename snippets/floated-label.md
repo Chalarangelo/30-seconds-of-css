@@ -46,12 +46,14 @@ One of most common used pattern is input plus label. Using CSS to create floated
   margin-top: -32px;
   color: #9e9e9e;
   transition: transform 0.1s ease-out;
+  pointer-events: none;
 }
 
 .input-label > input:not(:placeholder-shown) + .label,
 .input-label > input:focus + .label {
   color: grey;
-  transform: translate(-4px, -22px) scale(0.75);
+  transform-origin: left;
+  transform: translateY(-22px) scale(0.75);
 }
 
 .input-label > input:focus + .label {
