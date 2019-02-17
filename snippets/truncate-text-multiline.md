@@ -49,4 +49,6 @@ If the text is longer than one line, it will be truncated for `n` lines and end 
 
 #### Browser support
 
+- https://caniuse.com/#feat=css-gradients
+
 <!-- tags: layout -->
