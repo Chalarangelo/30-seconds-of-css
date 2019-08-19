@@ -3,8 +3,22 @@ import { select, selectAll, easeOutQuint } from '../deps/utils'
 
 const menu = select('.hamburger')
 const links = select('.sidebar__links')
+const sidebarLinks = selectAll('.sidebar__link')
 const sections = selectAll('.sidebar__section')
 const ACTIVE_CLASS = 'is-active'
+const ACTIVE_LINK_CLASS = 'sidebar__link--active'
+
+
+const initSideBar = () => {
+  for (let i = 0; i < sidebarLinks.length; i++) {
+    const currentLink = sidebarLinks[i]
+    const activable = currentLink.href === window.location.href
+
+    if (activable) {
+      currentLink.classList.add(ACTIVE_LINK_CLASS)
+    }
+  }
+}
 
 const toggle = () => {
   if (window.innerWidth <= 991) {
@@ -18,6 +32,8 @@ menu.addEventListener('click', toggle)
 
 links.addEventListener('click', e => {
   const link = e.target.closest('.sidebar__link')
+  activateLink(link, sidebarLinks)
+  
   if (link) {
     setTimeout(toggle, 50)
     jump(link.getAttribute('href'), {
@@ -27,6 +43,13 @@ links.addEventListener('click', e => {
     })
   }
 })
+
+const activateLink = (selectedLink, sidebarLinks) => {
+  for (let i = 0; i < sidebarLinks.length; i++) {
+    sidebarLinks[i].classList.remove(ACTIVE_LINK_CLASS)
+  }
+  selectedLink.classList.add(ACTIVE_LINK_CLASS)
+}
 
 document.addEventListener('click', e => {
   if (
@@ -50,5 +73,7 @@ EventHub.on('Tag.click', data => {
     }
   })
 })
+
+initSideBar()
 
 export default { toggle }
