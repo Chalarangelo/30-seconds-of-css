@@ -1,17 +1,17 @@
-### Grid centering
+### Centering Grid
 
 Horizontally and vertically centers a child element within a parent element using `grid`.
 
 #### HTML
 
 ```html
-<div class="grid-centering"><div class="child">Centered content.</div></div>
+<div class="centering-grid"><div class="child">Centered content.</div></div>
 ```
 
 #### CSS
 
 ```css
-.grid-centering {
+.centering-grid {
   display: grid;
   justify-content: center;
   align-items: center;

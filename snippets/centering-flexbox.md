@@ -1,17 +1,17 @@
-### Flexbox centering
+### Centering Flexbox
 
 Horizontally and vertically centers a child element within a parent element using `flexbox`.
 
 #### HTML
 
 ```html
-<div class="flexbox-centering"><div class="child">Centered content.</div></div>
+<div class="centering-flexbox"><div class="child">Centered content.</div></div>
 ```
 
 #### CSS
 
 ```css
-.flexbox-centering {
+.centering-flexbox {
   display: flex;
   justify-content: center;
   align-items: center;

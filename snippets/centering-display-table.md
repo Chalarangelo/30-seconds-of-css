@@ -1,4 +1,4 @@
-### Display table centering
+### Centering display table
 
 Vertically and horizontally centers a child element within its parent element using `display: table` (as an alternative to `flexbox`).
 
