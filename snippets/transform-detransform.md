@@ -29,9 +29,8 @@ This allows for some neat effects such as skewed buttons.
 
 #### Explanation
 
-- `--transform: 10deg` sets a css variable we can later use to prevent duplicate code.
+- `--transform: 10deg` sets a CSS variable we can later use to prevent duplicate code.
 - `calc(-1 * var(--transform))` on the child element negates the transform from the parent.
-- the `padding`, `border` and `display` properties on the parent element are not necessary but underline the use-case.
 
 - Note: the `display` property of the child element may not be `inline`, otherwise the transform will be ignored ([see also](https://drafts.csswg.org/css-transforms-1/#terminology)).
 
