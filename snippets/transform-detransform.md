@@ -12,7 +12,7 @@ This allows for some neat effects such as skewed buttons.
 
 ```css
 :root {
-    --transform: 10deg;
+  --transform: 10deg;
 }
 
 .parent {
