@@ -34,6 +34,7 @@ nav li a {
   text-align: center;
   padding: 8px 12px;
   text-decoration: none;
+  z-index: 0;
 }
 
 li a::before {
