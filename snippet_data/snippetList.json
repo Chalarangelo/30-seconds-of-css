@@ -330,9 +330,9 @@
     {
       "id": "four-section-split-screen",
       "type": "snippetListing",
-      "title": "Four Section Split Screen",
+      "title": "Four section split screen",
       "attributes": {
-        "text": "Split the screen into four (square) sections.\n\n",
+        "text": "Split the container into four (square) sections.\n\n",
         "tags": [
           "visual",
           "beginner"
