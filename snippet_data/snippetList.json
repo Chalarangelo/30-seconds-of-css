@@ -328,6 +328,21 @@
       }
     },
     {
+      "id": "four-section-split-screen",
+      "type": "snippetListing",
+      "title": "Four Section Split Screen",
+      "attributes": {
+        "text": "Split the screen into four (square) sections.\n\n",
+        "tags": [
+          "visual",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": ""
+      }
+    },
+    {
       "id": "fullscreen",
       "type": "snippetListing",
       "title": "Fullscreen",

@@ -604,6 +604,33 @@
       }
     },
     {
+      "id": "four-section-split-screen",
+      "title": "Four section split screen",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "four-section-split-screen.md",
+        "text": "Split the container into four (square) sections.\n\n",
+        "explanation": "\n\n- The float property moves each div into position, one after the other.\n\n",
+        "browserSupport": {
+          "text": "\n\n<span class=\"snippet__support-note\"> Support unknown for Opera Mini, UC Browser for Android, Samsung Internet (pre 9.2), QQ Browser, Baidu Browser, and KaiOS Browser.</span>\n\n<!-- Whenever possible, link a `caniuse` feature which allows the browser support percentage to be displayed.\nIf no link is provided, it defaults to 99+%. -->\n\n- https://caniuse.com/#feat=css-focus-within\n",
+          "supportPercentage": 93.26
+        },
+        "codeBlocks": {
+          "html": "<div class=\"container\">\n  <div id=\"topLeft\"><div>\n  <div id=\"topRight\"><div>\n  <div id=\"bottomLeft\"><div>\n  <div id=\"bottomRight\"><div>\n  </div>",
+          "css": "html, body {\n margin: 0;\n padding:0\n}\n\n.container{\n height: 300px\n width:100%;\n}\n\n#topLeft, #topRight, #bottomLeft, #bottomRight{\n width: 50%;\n height: 50%;\n float: left;\n text-align: center;\n}\n\n#topLeft{\n background: #FDFEFE;\n}\n\n#topRight{\n background: #CD5C5C;\n}\n\n#bottomLeft{\n background: #424949;\n}\n\n#topLeft{\n background: #17202A;\n}\n\n",
+          "js": "",
+          "scopedCss": "[data-scope=\"four-section-split-screen\"] html, body {\n margin: 0;\n padding:0}\n\n[data-scope=\"four-section-split-screen\"] .container {\n height: 300px\n width:100%;}\n\n[data-scope=\"four-section-split-screen\"] #topLeft, #topRight, #bottomLeft, #bottomRight{\n width: 50%;\n height: 50%;\n float: left;\n text-align: center;}\n\n[data-scope=\"four-section-split-screen\"] #topLeft{\n background: #FDFEFE;}\n\n[data-scope=\"four-section-split-screen\"]#topRight{\n background: #CD5C5C;}\n\n[data-scope=\"four-section-split-screen\"]#bottomLeft{\n background: #424949;}\n\n[data-scope=\"four-section-split-screen\"]#topLeft{\n background: #17202A; }\n"
+        },
+        "tags": [
+          "visual",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": ""
+      }
+    },
+    {
       "id": "fullscreen",
       "title": "Fullscreen",
       "type": "snippet",
