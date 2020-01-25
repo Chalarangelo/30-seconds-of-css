@@ -1,6 +1,6 @@
 ---
-title: Pentagon Loader
-tags: Animation, Intermediate
+title: ange Input
+tags: Interactivity, Beginner
 ---
 
 # Displays an input:range with styles and hover/active/focus animations.

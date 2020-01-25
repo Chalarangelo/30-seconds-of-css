@@ -68,48 +68,162 @@ body{
 //       transform: rotate(360deg);
 //     }
 //   }
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+// .range-input{
+//     height: 1em;
+//     background-color: #bbb9ae;
+//     -webkit-appearance: none;
+//     width: 85%;
 
-.range-input{
-    height: 1em;
-    background-color: #bbb9ae;
-    -webkit-appearance: none;
-    width: 85%;
+//     border-radius: .3em;
 
-    border-radius: .3em;
+//     box-shadow: 0 0 3px 1px #777;
 
-    box-shadow: 0 0 3px 1px #777;
+//     transition: all .2s;
 
-    transition: all .2s;
+//     &:focus{
+//         outline: none;
+//         box-shadow: 0 0 5px 1px #666;
 
-    &:focus{
-        outline: none;
-        box-shadow: 0 0 5px 1px #666;
+//         height: 1.25em;
+//         border-radius: .5em;
+//     }
+//     &::-webkit-slider-runnable-track{
+//         width: 100%;
+//     }
+//     &::-webkit-slider-thumb{
+//         -webkit-appearance: none;
+//         width: 1.1em;
+//         height: 2.4em;
 
-        height: 1.25em;
-        border-radius: .5em;
+//         background-color: #ccc;
+//         border-radius: .55em;
+
+//         box-shadow: 0 0 5px #444;
+
+//         transition: all .1s;
+//         &:hover{
+//             background: lighten($color: #ccc, $amount: 10);
+//             width: 1.4em;
+//             height: 2.3em;
+//             border-radius: 1.2em;
+//         }
+//         &:active{
+//             box-shadow: 0 0 3px 2px #444;
+//         }
+//     }
+// }
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+// .text-3d{
+//     --shadow-color: #444;
+//     font-family: comic sans MS;
+//     color: #eee;
+//     font-style: italic;
+//     letter-spacing: 2px;
+
+//     transform: rotate(-5deg);
+//     text-shadow: 0 0 5px var(--shadow-color),
+//                  1px 1px var(--shadow-color),
+//                  2px 2px var(--shadow-color),
+//                  3px 3px var(--shadow-color),
+//                  4px 4px var(--shadow-color),
+//                  5px 5px var(--shadow-color),
+//                  6px 6px var(--shadow-color),
+//                  7px 7px var(--shadow-color),
+//                  8px 8px var(--shadow-color),
+//                  9px 9px var(--shadow-color),
+//                  10px 10px var(--shadow-color);
+// }
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+.future-loader{
+    --loader-color: #27bad4;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    position: relative;
+    &:before, &:after{
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: .2em;
+        border-radius: .1em;
+        background-color: var(--loader-color);
+
+        top: 50%;
+        transform: translateY(-50%);
+
+        z-index: -2;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(.4, .62, .57, .98);
+        box-shadow: 0 0 3px var(--loader-color);
     }
-    &::-webkit-slider-runnable-track{
-        width: 100%;
+    &:before{
+        animation-name: move_before;
     }
-    &::-webkit-slider-thumb{
-        -webkit-appearance: none;
-        width: 1.1em;
-        height: 2.4em;
+    &:after{
+        animation-name: move_after;
+    }
 
-        background-color: #ccc;
-        border-radius: .55em;
+    .square{
+        position: absolute;
+        box-shadow: 0 0 5px var(--loader-color);
+        width: 400%;
+        height: 400%;
 
-        box-shadow: 0 0 5px #444;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
 
-        transition: all .1s;
-        &:hover{
-            background: lighten($color: #ccc, $amount: 10);
-            width: 1.4em;
-            height: 2.3em;
-            border-radius: 1.2em;
-        }
-        &:active{
-            box-shadow: 0 0 3px 2px #444;
-        }
+        animation-name: rotate_square;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+        background-color: #fff;
+        z-index: -1;
+    }
+}
+@keyframes rotate_square{
+    25% {
+        transform: translate(-50%, 50%) rotate(90deg);
+        box-shadow: 0 0 2px var(--loader-color);
+    }
+    50% {
+        transform: translate(-50%, 50%) rotate(180deg) scale(1.25);
+        box-shadow: 0 0 5px var(--loader-color);
+    }
+    75% {
+        transform: translate(-50%, 50%) rotate(270deg);
+        box-shadow: 0 0 5px 2px var(--loader-color);
+    }
+    100% {
+        transform: translate(-50%, 50%) rotate(360deg) scale(1);
+        box-shadow: 0 0 5px var(--loader-color);
+    }
+}
+@keyframes move_before{
+    0%, 70% {
+        opacity: 0;
+        right: 800%;
+    }
+    100%{
+        opacity: 1;
+        right: 0;
+    }
+}
+@keyframes move_after{
+    0%, 70% {
+        opacity: 0;
+        left: 800%;
+    }
+    100%{
+        opacity: 1;
+        left: 0;
     }
 }
