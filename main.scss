@@ -4,67 +4,112 @@ body{
     justify-content: center;
     align-items: center;
 }
-.pentagon-loader {
-    display: inline-block;
-    width: 7em;
-    height: 7em;
-    position: relative;
-    animation-name: rotate_pentagon;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    --bgColor: #444;
-    --lineweight: 5px;
-  }
-  .pentagon-loader:before, .pentagon-loader .top-bars:before, .pentagon-loader .top-bars:after, .pentagon-loader .side-bars:before, .pentagon-loader .side-bars:after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: var(--bgColor);
-  }
-  .pentagon-loader:before {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -18%;
-  }
-  .pentagon-loader .top-bars:before, .pentagon-loader .top-bars:after, .pentagon-loader:before {
-    height: var(--lineweight);
-    width: 92%;
-  }
-  .pentagon-loader .top-bars:before {
-    left: -33%;
-    transform: rotate(-36deg);
-  }
-  .pentagon-loader .top-bars:after {
-    right: -33%;
-    transform: rotate(36deg);
-  }
-  .pentagon-loader .side-bars:before, .pentagon-loader .side-bars:after {
-    width: var(--lineweight);
-    height: 95%;
-    bottom: -20%;
-  }
-  .pentagon-loader .side-bars:before {
-    left: -10%;
-    transform: rotate(-18deg);
-  }
-  .pentagon-loader .side-bars:after {
-    right: -10%;
-    transform: rotate(18deg);
-  }
-  @keyframes rotate_pentagon {
-    0% {
-      background-color: transparent;
+// .pentagon-loader {
+//     display: inline-block;
+//     width: 7em;
+//     height: 7em;
+//     position: relative;
+//     animation-name: rotate_pentagon;
+//     animation-duration: 3s;
+//     animation-iteration-count: infinite;
+//     --bgColor: #444;
+//     --lineweight: 5px;
+//   }
+//   .pentagon-loader:before, .pentagon-loader .top-bars:before, .pentagon-loader .top-bars:after, .pentagon-loader .side-bars:before, .pentagon-loader .side-bars:after {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     background-color: var(--bgColor);
+//   }
+//   .pentagon-loader:before {
+//     left: 50%;
+//     transform: translateX(-50%);
+//     bottom: -18%;
+//   }
+//   .pentagon-loader .top-bars:before, .pentagon-loader .top-bars:after, .pentagon-loader:before {
+//     height: var(--lineweight);
+//     width: 92%;
+//   }
+//   .pentagon-loader .top-bars:before {
+//     left: -33%;
+//     transform: rotate(-36deg);
+//   }
+//   .pentagon-loader .top-bars:after {
+//     right: -33%;
+//     transform: rotate(36deg);
+//   }
+//   .pentagon-loader .side-bars:before, .pentagon-loader .side-bars:after {
+//     width: var(--lineweight);
+//     height: 95%;
+//     bottom: -20%;
+//   }
+//   .pentagon-loader .side-bars:before {
+//     left: -10%;
+//     transform: rotate(-18deg);
+//   }
+//   .pentagon-loader .side-bars:after {
+//     right: -10%;
+//     transform: rotate(18deg);
+//   }
+//   @keyframes rotate_pentagon {
+//     0% {
+//       background-color: transparent;
+//     }
+//     25% {
+//       transform: rotate(90deg);
+//     }
+//     50% {
+//       transform: rotate(180deg);
+//     }
+//     75% {
+//       transform: rotate(270deg);
+//     }
+//     100% {
+//       transform: rotate(360deg);
+//     }
+//   }
+
+.range-input{
+    height: 1em;
+    background-color: #bbb9ae;
+    -webkit-appearance: none;
+    width: 85%;
+
+    border-radius: .3em;
+
+    box-shadow: 0 0 3px 1px #777;
+
+    transition: all .2s;
+
+    &:focus{
+        outline: none;
+        box-shadow: 0 0 5px 1px #666;
+
+        height: 1.25em;
+        border-radius: .5em;
     }
-    25% {
-      transform: rotate(90deg);
+    &::-webkit-slider-runnable-track{
+        width: 100%;
     }
-    50% {
-      transform: rotate(180deg);
+    &::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        width: 1.1em;
+        height: 2.4em;
+
+        background-color: #ccc;
+        border-radius: .55em;
+
+        box-shadow: 0 0 5px #444;
+
+        transition: all .1s;
+        &:hover{
+            background: lighten($color: #ccc, $amount: 10);
+            width: 1.4em;
+            height: 2.3em;
+            border-radius: 1.2em;
+        }
+        &:active{
+            box-shadow: 0 0 3px 2px #444;
+        }
     }
-    75% {
-      transform: rotate(270deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+}
