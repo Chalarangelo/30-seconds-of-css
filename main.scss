@@ -1,0 +1,92 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pentagon-loader{
+    display: inline-block;
+
+    width: 10em;
+    height: 10em;
+
+    // border: 1px solid #000;
+
+    position: relative;
+
+    animation-name: rotate_pentagon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    &:before{
+        content: "";
+
+        display: block;
+        position: absolute;
+
+        height: 2px;
+        width: 90%;
+
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -18%;
+
+        background-color: #444;
+    }
+    
+    .d1:before, .d1:after{
+        content: "";
+
+        display: block;
+        position: absolute;
+
+        height: 2px;
+        width: 92%;
+
+        background-color: #444;
+    }
+    .d1:before{
+        left: -33%;
+        transform: rotate(-36deg);
+    }
+    .d1:after{
+        right: -33%;
+        transform: rotate(36deg);
+    }
+
+
+    .d2:before, .d2:after{
+        content: "";
+
+        display: block;
+        position: absolute;
+
+        width: 2px;
+        height: 95%;
+        bottom: -20%;
+
+        background-color: #444;
+    }
+    .d2:before{
+        left: -10%;
+        transform: rotate(-18deg);
+    }
+    .d2:after{
+        right: -10%;
+        transform: rotate(18deg);
+    }
+}
+
+@keyframes rotate_pentagon{
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
