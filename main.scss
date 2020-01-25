@@ -4,69 +4,67 @@ body{
     justify-content: center;
     align-items: center;
 }
-.pentagon-loader{
+.pentagon-loader {
     display: inline-block;
-    width: 10em;
-    height: 10em;
+    width: 7em;
+    height: 7em;
     position: relative;
     animation-name: rotate_pentagon;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-
     --bgColor: #444;
     --lineweight: 5px;
-    &:before, .d1:before, .d1:after, .d2:before, .d2:after{
-        content: "";
-        display: block;
-        position: absolute;
-        background-color: var(--bgColor);
+  }
+  .pentagon-loader:before, .pentagon-loader .top-bars:before, .pentagon-loader .top-bars:after, .pentagon-loader .side-bars:before, .pentagon-loader .side-bars:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--bgColor);
+  }
+  .pentagon-loader:before {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -18%;
+  }
+  .pentagon-loader .top-bars:before, .pentagon-loader .top-bars:after, .pentagon-loader:before {
+    height: var(--lineweight);
+    width: 92%;
+  }
+  .pentagon-loader .top-bars:before {
+    left: -33%;
+    transform: rotate(-36deg);
+  }
+  .pentagon-loader .top-bars:after {
+    right: -33%;
+    transform: rotate(36deg);
+  }
+  .pentagon-loader .side-bars:before, .pentagon-loader .side-bars:after {
+    width: var(--lineweight);
+    height: 95%;
+    bottom: -20%;
+  }
+  .pentagon-loader .side-bars:before {
+    left: -10%;
+    transform: rotate(-18deg);
+  }
+  .pentagon-loader .side-bars:after {
+    right: -10%;
+    transform: rotate(18deg);
+  }
+  @keyframes rotate_pentagon {
+    0% {
+      background-color: transparent;
     }
-    &:before{
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -18%;
-    }
-    
-    .d1:before, .d1:after, &:before{
-        height: var(--lineweight);
-        width: 92%;
-    }
-    .d1:before{
-        left: -33%;
-        transform: rotate(-36deg);
-    }
-    .d1:after{
-        right: -33%;
-        transform: rotate(36deg);
-    }
-
-
-    .d2:before, .d2:after{
-        width: var(--lineweight);
-        height: 95%;
-        bottom: -20%;
-    }
-    .d2:before{
-        left: -10%;
-        transform: rotate(-18deg);
-    }
-    .d2:after{
-        right: -10%;
-        transform: rotate(18deg);
-    }
-}
-
-@keyframes rotate_pentagon{
     25% {
-        transform: rotate(90deg);
+      transform: rotate(90deg);
     }
     50% {
-        transform: rotate(180deg);
+      transform: rotate(180deg);
     }
     75% {
-        transform: rotate(270deg);
+      transform: rotate(270deg);
     }
-    100%{
-        transform: rotate(360deg);
+    100% {
+      transform: rotate(360deg);
     }
-}
+  }
