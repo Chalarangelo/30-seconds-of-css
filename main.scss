@@ -6,43 +6,30 @@ body{
 }
 .pentagon-loader{
     display: inline-block;
-
     width: 10em;
     height: 10em;
-
-    // border: 1px solid #000;
-
     position: relative;
-
     animation-name: rotate_pentagon;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    &:before{
-        content: "";
 
+    --bgColor: #444;
+    --lineweight: 5px;
+    &:before, .d1:before, .d1:after, .d2:before, .d2:after{
+        content: "";
         display: block;
         position: absolute;
-
-        height: 2px;
-        width: 90%;
-
+        background-color: var(--bgColor);
+    }
+    &:before{
         left: 50%;
         transform: translateX(-50%);
         bottom: -18%;
-
-        background-color: #444;
     }
     
-    .d1:before, .d1:after{
-        content: "";
-
-        display: block;
-        position: absolute;
-
-        height: 2px;
+    .d1:before, .d1:after, &:before{
+        height: var(--lineweight);
         width: 92%;
-
-        background-color: #444;
     }
     .d1:before{
         left: -33%;
@@ -55,16 +42,9 @@ body{
 
 
     .d2:before, .d2:after{
-        content: "";
-
-        display: block;
-        position: absolute;
-
-        width: 2px;
+        width: var(--lineweight);
         height: 95%;
         bottom: -20%;
-
-        background-color: #444;
     }
     .d2:before{
         left: -10%;

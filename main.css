@@ -13,27 +13,26 @@ body {
   animation-name: rotate_pentagon;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+  --bgColor: #444;
+  --lineweight: 5px;
+}
+
+.pentagon-loader:before, .pentagon-loader .d1:before, .pentagon-loader .d1:after, .pentagon-loader .d2:before, .pentagon-loader .d2:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--bgColor);
 }
 
 .pentagon-loader:before {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 90%;
   left: 50%;
   transform: translateX(-50%);
   bottom: -18%;
-  background-color: #444;
 }
 
-.pentagon-loader .d1:before, .pentagon-loader .d1:after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 2px;
+.pentagon-loader .d1:before, .pentagon-loader .d1:after, .pentagon-loader:before {
+  height: var(--lineweight);
   width: 92%;
-  background-color: #444;
 }
 
 .pentagon-loader .d1:before {
@@ -47,13 +46,9 @@ body {
 }
 
 .pentagon-loader .d2:before, .pentagon-loader .d2:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 2px;
+  width: var(--lineweight);
   height: 95%;
   bottom: -20%;
-  background-color: #444;
 }
 
 .pentagon-loader .d2:before {
@@ -80,26 +75,6 @@ body {
     transform: rotate(360deg);
   }
 }
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
 /*# sourceMappingURL=main.css.map */
 /*# sourceMappingURL=main.css.map */
 /*# sourceMappingURL=main.css.map */
