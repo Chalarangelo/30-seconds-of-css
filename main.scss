@@ -141,89 +141,118 @@ body{
 // --------------------------------------------------------------
 // --------------------------------------------------------------
 // --------------------------------------------------------------
-.future-loader{
-    --loader-color: #27bad4;
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    position: relative;
-    &:before, &:after{
-        content: "";
-        position: absolute;
-        width: 200%;
-        height: .2em;
-        border-radius: .1em;
-        background-color: var(--loader-color);
+// .future-loader{
+//     --loader-color: #27bad4;
+//     display: inline-block;
+//     width: 1.5em;
+//     height: 1.5em;
+//     position: relative;
+//     &:before, &:after{
+//         content: "";
+//         position: absolute;
+//         width: 200%;
+//         height: .2em;
+//         border-radius: .1em;
+//         background-color: var(--loader-color);
 
-        top: 50%;
-        transform: translateY(-50%);
+//         top: 50%;
+//         transform: translateY(-50%);
 
-        z-index: -2;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
-        animation-timing-function: cubic-bezier(.4, .62, .57, .98);
-        box-shadow: 0 0 3px var(--loader-color);
-    }
-    &:before{
-        animation-name: move_before;
-    }
-    &:after{
-        animation-name: move_after;
-    }
+//         z-index: -2;
+//         animation-duration: 1.5s;
+//         animation-iteration-count: infinite;
+//         animation-timing-function: cubic-bezier(.4, .62, .57, .98);
+//         box-shadow: 0 0 3px var(--loader-color);
+//     }
+//     &:before{
+//         animation-name: move_before;
+//     }
+//     &:after{
+//         animation-name: move_after;
+//     }
 
-    .square{
-        position: absolute;
-        box-shadow: 0 0 5px var(--loader-color);
-        width: 400%;
-        height: 400%;
+//     .square{
+//         position: absolute;
+//         box-shadow: 0 0 5px var(--loader-color);
+//         width: 400%;
+//         height: 400%;
 
-        bottom: 50%;
-        left: 50%;
-        transform: translate(-50%, 50%);
+//         bottom: 50%;
+//         left: 50%;
+//         transform: translate(-50%, 50%);
 
-        animation-name: rotate_square;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
+//         animation-name: rotate_square;
+//         animation-duration: 3s;
+//         animation-iteration-count: infinite;
 
-        background-color: #fff;
-        z-index: -1;
-    }
+//         background-color: #fff;
+//         z-index: -1;
+//     }
+// }
+// @keyframes rotate_square{
+//     25% {
+//         transform: translate(-50%, 50%) rotate(90deg);
+//         box-shadow: 0 0 2px var(--loader-color);
+//     }
+//     50% {
+//         transform: translate(-50%, 50%) rotate(180deg) scale(1.25);
+//         box-shadow: 0 0 5px var(--loader-color);
+//     }
+//     75% {
+//         transform: translate(-50%, 50%) rotate(270deg);
+//         box-shadow: 0 0 5px 2px var(--loader-color);
+//     }
+//     100% {
+//         transform: translate(-50%, 50%) rotate(360deg) scale(1);
+//         box-shadow: 0 0 5px var(--loader-color);
+//     }
+// }
+// @keyframes move_before{
+//     0%, 70% {
+//         opacity: 0;
+//         right: 800%;
+//     }
+//     100%{
+//         opacity: 1;
+//         right: 0;
+//     }
+// }
+// @keyframes move_after{
+//     0%, 70% {
+//         opacity: 0;
+//         left: 800%;
+//     }
+//     100%{
+//         opacity: 1;
+//         left: 0;
+//     }
+// }
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+:root{
+    --triangle-loader-color: #56e3fc;
+    --triangle-loader-width: 6em;
+    --triangle-loader-height: 10em;
 }
-@keyframes rotate_square{
+.triangle-loader{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 var(--triangle-loader-width) var(--triangle-loader-height) var(--triangle-loader-width);
+    border-color: transparent transparent var(--triangle-loader-color) transparent;animation-timing-function: cubic-bezier(.8,1.98,.43,.59);
+    animation-name: animate_triangle;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+
+    transform-origin: 50% 0;
+}
+@keyframes animate_triangle{
     25% {
-        transform: translate(-50%, 50%) rotate(90deg);
-        box-shadow: 0 0 2px var(--loader-color);
+        transform: scale(.4, .6) rotate(-25deg) translateY(3em);
     }
-    50% {
-        transform: translate(-50%, 50%) rotate(180deg) scale(1.25);
-        box-shadow: 0 0 5px var(--loader-color);
-    }
+
     75% {
-        transform: translate(-50%, 50%) rotate(270deg);
-        box-shadow: 0 0 5px 2px var(--loader-color);
-    }
-    100% {
-        transform: translate(-50%, 50%) rotate(360deg) scale(1);
-        box-shadow: 0 0 5px var(--loader-color);
-    }
-}
-@keyframes move_before{
-    0%, 70% {
-        opacity: 0;
-        right: 800%;
-    }
-    100%{
-        opacity: 1;
-        right: 0;
-    }
-}
-@keyframes move_after{
-    0%, 70% {
-        opacity: 0;
-        left: 800%;
-    }
-    100%{
-        opacity: 1;
-        left: 0;
+        transform: scale(.4, .8) rotate(25deg) translateY(3em);
     }
 }
