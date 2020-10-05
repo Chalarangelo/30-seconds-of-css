@@ -1,5 +1,5 @@
 ---
-title: grid-template-areas
+title: Grid Template Areas
 tags: grid,layout,intermediate
 ---
 
