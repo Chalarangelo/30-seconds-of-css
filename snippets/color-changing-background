@@ -13,6 +13,12 @@ Creates a list with floating headings for each section.
 ```
 
 ```css
+html, body {
+   width: 100%;
+   height: 100%;
+   background: #222;
+   animation: rainbow 5s linear infinite;
+}
 @keyframes rainbow {
     0%, 100% {
         background-color: red;
