@@ -1,0 +1,27 @@
+---
+title: Color changing background
+tags: visual,beginner
+---
+
+Creates a list with floating headings for each section.
+
+- Create keyframes with different colors
+- Apply the new animation to the body
+```html
+<body>
+</body>
+```
+
+```css
+@keyframes rainbow {
+    0%, 100% {
+        background-color: red;
+    }
+    33% {
+      background-color: blue;
+    }
+    66% {
+      background-color: yellow;
+    }
+}
+```
