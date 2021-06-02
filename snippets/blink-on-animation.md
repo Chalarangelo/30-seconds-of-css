@@ -67,7 +67,7 @@ Gives turn-on effect after blinking several times
   78% {
     opacity: 0;
   }
-  95% {
+  100% {
     opacity: 1;
   }
 }
