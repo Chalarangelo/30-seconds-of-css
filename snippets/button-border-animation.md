@@ -27,27 +27,30 @@ Creates a border animation on hover.
 .animated-border-button:before,
 .animated-border-button:after {
   border: 0 solid transparent;
-  transition: all 0.3s;
-  content: '';
+  transition: transform 0.3s;
+  content: "";
   height: 0;
   position: absolute;
-  width: 24px;
+  width: 100%;
+  transform: scaleX(0.2);
 }
 
 .animated-border-button:before {
   border-top: 2px solid #263059;
   right: 0;
   top: -4px;
+  transform-origin: left;
 }
 
 .animated-border-button:after {
   border-bottom: 2px solid #263059;
   bottom: -4px;
   left: 0;
+  transform-origin: right;
 }
 
 .animated-border-button:hover:before,
 .animated-border-button:hover:after {
-  width: 100%;
+  transform: scaleX(1);
 }
 ```
