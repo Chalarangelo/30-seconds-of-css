@@ -8,8 +8,7 @@ lastUpdated: 2020-12-30T15:37:37+02:00
 Horizontally and vertically centers a child element within a parent element using `grid`.
 
 - Use `display: grid` to create a grid layout.
-- Use `justify-content: center` to center the child horizontally.
-- Use `align-items: center` to center the child vertically.
+- Use `place-items: center` to center align items along both the block and inline directions at once (i.e. the `align-items` and `justify-items` properties).
 
 ```html
 <div class="grid-centering">
@@ -20,8 +19,7 @@ Horizontally and vertically centers a child element within a parent element usin
 ```css
 .grid-centering {
   display: grid;
-  justify-content: center;
-  align-items: center;
+  place-items: center;
   height: 100px;
 }
 ```
