@@ -48,5 +48,6 @@ Adds a fading gradient to an overflowing element to better indicate there is mor
   height: 200px;
   padding: 15px;
   line-height: 1.2;
+  user-select: none;
 }
 ```
