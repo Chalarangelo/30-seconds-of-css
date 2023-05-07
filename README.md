@@ -1,3 +1,9 @@
+> **IMPORTANT NOTICE:**
+>
+> As of May, 2023, all 30-seconds content repositories have been merged into [30-seconds-of-code](https://github.com/30-seconds/30-seconds-of-code).
+>
+> Please watch, star and follow relevant activity there.
+
 [![Logo](/logo.png)](https://30secondsofcode.org/css/p/1)
 
 # 30 seconds of code
